@@ -1,0 +1,62 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tic Tac Toe — Local & vs Computer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app" role="application">
+    <div class="left">
+      <h1>Tic Tac Toe — Play vs Computer or Local</h1>
+      <div class="mode-row">
+        <button class="btn active" id="mode-local">Local 2P</button>
+        <button class="btn" id="mode-computer">Computer</button>
+      </div>
+
+      <div class="section">
+        <div class="scoreboard">
+          <div class="scorecard"><div class="label">Player X</div><div class="value" id="score-x">0</div></div>
+          <div class="scorecard"><div class="label">Draws</div><div class="value" id="score-draw">0</div></div>
+          <div class="scorecard"><div class="label">Player O</div><div class="value" id="score-o">0</div></div>
+        </div>
+        <div class="controls">
+          <button class="btn small" id="new-game">New Game</button>
+          <button class="btn small" id="reset-score">Reset Scores</button>
+          <div style="flex:1"></div>
+          <button class="btn small" id="swap">Swap X/O</button>
+        </div>
+      </div>
+
+      <div class="board-wrap">
+        <div class="board" id="board" aria-label="tic tac toe board"></div>
+        <div class="status" id="status">Turn: <strong id="turn-indicator">X</strong></div>
+      </div>
+    </div>
+
+    <div class="right">
+      <h2 style="margin:0 0 10px 0; font-size:16px">Settings</h2>
+      <div class="section" id="computer-settings" style="display:none">
+        <label>Computer difficulty</label>
+        <div style="display:flex; gap:8px">
+          <button class="btn small" id="diff-easy">Easy</button>
+          <button class="btn small active" id="diff-medium">Medium</button>
+          <button class="btn small" id="diff-hard">Hard</button>
+        </div>
+        <div class="tiny" style="margin-top:8px">Easy: random moves. Medium: depth-limited Minimax. Hard: full Minimax.</div>
+      </div>
+
+      <div class="section">
+        <label>Game Log</label>
+        <textarea id="log" readonly></textarea>
+      </div>
+      <footer>Tip: Hard = unbeatable AI. Medium = balanced. Easy = random.</footer>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
