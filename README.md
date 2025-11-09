@@ -31,8 +31,4 @@ You can play **locally with a friend (2 players on the same device)** or challen
 
 ---
 
-## 🚀 How to Run
 
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/your-username/tic-tac-toe-ai.git
